@@ -60,7 +60,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Code\PlayerController.cs" />
+    <Compile Include="Assets\Code\BossController1.cs" />
+    <Compile Include="Assets\Code\PlayerControllerOld.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Keno/Documents/UOLGameJam2019/UOLGameJam2019/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
