@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bullet
   - Enemy
   layers:
   - Default
@@ -15,9 +14,9 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - Background
-  - Character
+  - 
+  - 
+  - 
   - 
   - 
   - 

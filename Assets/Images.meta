@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+guid: 27d0a9086ab8d9e4ca43367dad4418df
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/Images.meta
 guid: 66334d0da24dc964d9509fa350af0e5d
 =======
@@ -12,6 +15,7 @@ guid: f3fee1125541eee4288be4a5c0d0b59b
 guid: 27d0a9086ab8d9e4ca43367dad4418df
 >>>>>>> 2aa40be75cf7eb7ee35c9bd0d47868a6c4d040e5
 >>>>>>> origin/master
+>>>>>>> ce7a8b4694273696500b5be2adb49460cb2310ce
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
