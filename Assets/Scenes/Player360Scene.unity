@@ -336,5 +336,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 1d1db596da5e032429b18f11c0abf4ae,
         type: 3}
+    - target: {fileID: 5347119078191952580, guid: 21f5e73805d542240bc4c41406eb3c88,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347119078191952586, guid: 21f5e73805d542240bc4c41406eb3c88,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347119078191952586, guid: 21f5e73805d542240bc4c41406eb3c88,
+        type: 3}
+      propertyPath: runSpeed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21f5e73805d542240bc4c41406eb3c88, type: 3}
