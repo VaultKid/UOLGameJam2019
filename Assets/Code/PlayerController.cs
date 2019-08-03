@@ -46,8 +46,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject playerObject;
     Rigidbody2D body;
-    public float power = 30;
-    public float maxspeed = 50;
+    public float power = 5;
+    public float maxspeed = 20;
     public float turnpower = 3;
     public float friction = 1;
     public Vector2 curspeed;
