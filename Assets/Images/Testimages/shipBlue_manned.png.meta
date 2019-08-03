@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/laserGreen1.png.meta
-guid: f2671a8ba9ccdb244884e360a9e152f8
-=======
-guid: 5c483c841329c6d4d83cb5ba07e5ec8a
->>>>>>> origin/master:Assets/Images/Testimages/medievalUnit_02.png.meta
+guid: 842127ddd9b6a694b95a6c5066f6498d
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -75,6 +71,17 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
