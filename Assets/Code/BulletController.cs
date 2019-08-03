@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShotMover : MonoBehaviour
+public class BulletController : MonoBehaviour
 {
 
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     public float speed;
 
     private void Start()
@@ -13,6 +13,11 @@ public class ShotMover : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //rb.velocity = transform.forward * speed;
         Vector2 vector = new Vector2(0f, 20f);
-        rb.AddForce(vector * speed);
+        //rb.AddForce(vector * speed);
+        //transform.Translate(Vector3.forward*speed);
+    }
+
+    private void FixedUpdate() {
+        transform.Translate(Vector3.up* speed);
     }
 }

@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
     public float friction = 1;
     public Vector2 curspeed;
 
+
     void Start() {
         body = GetComponent<Rigidbody2D>();
     }
