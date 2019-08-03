@@ -1,9 +1,17 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD:Assets/Images.meta
+guid: 66334d0da24dc964d9509fa350af0e5d
+=======
+guid: 1947341294297a041bc698b5196b1fdc
+>>>>>>> origin/master:Assets/Audio.meta
+=======
+<<<<<<< HEAD
 guid: f3fee1125541eee4288be4a5c0d0b59b
 =======
 guid: 27d0a9086ab8d9e4ca43367dad4418df
 >>>>>>> 2aa40be75cf7eb7ee35c9bd0d47868a6c4d040e5
+>>>>>>> origin/master
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
