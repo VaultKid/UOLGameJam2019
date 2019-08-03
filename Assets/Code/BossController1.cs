@@ -17,11 +17,6 @@ public class BossController1 : MonoBehaviour
         InvokeRepeating("randomBossMovement", 1f, 1.0f);
 
     }
-    
-    void FixedUpdate()
-    {
-        
-    }
 
     public void randomBossMovement() {
         Vector2 randomMovement = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
