@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Prefabs/Bolt.prefab.meta
 guid: 26f73c899a4470842ab9a2f4138d19b1
 PrefabImporter:
-=======
-guid: 2a5499bffec25234da62f6bdea175974
-DefaultImporter:
->>>>>>> origin/master:Assets/Scenes/PlayerMovementTestScene.unity.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
