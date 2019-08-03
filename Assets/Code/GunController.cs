@@ -6,13 +6,13 @@ public class GunController : MonoBehaviour
 {
 
     //public GameObject bullet;
+    //public bool isFiring;
+
+    //public Transform shotSpawn;
     public BulletController bullet;
-    public Transform shotSpawn;
     public float bulletSpeed;
-    public bool isFiring;
     public float fireRate;
     private float nextFire;
-
     public Transform firePoint;
 
     private void Update()

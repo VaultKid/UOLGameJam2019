@@ -12,7 +12,7 @@ public class BulletController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         //rb.velocity = transform.forward * speed;
-        Vector2 vector = new Vector2(0f, 20f);
+        //Vector2 vector = new Vector2(0f, 20f);
         //rb.AddForce(vector * speed);
         //transform.Translate(Vector3.forward*speed);
     }

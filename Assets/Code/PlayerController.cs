@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D body;
+
     /*
     float horizontal;
     float vertical;
@@ -44,12 +44,14 @@ public class PlayerController : MonoBehaviour
     }
     */
 
+    public GameObject playerObject;
+    Rigidbody2D body;
     public float power = 30;
     public float maxspeed = 50;
     public float turnpower = 3;
     public float friction = 1;
     public Vector2 curspeed;
-
+    public int hitPoints;
 
     void Start() {
         body = GetComponent<Rigidbody2D>();
@@ -91,6 +93,16 @@ public class PlayerController : MonoBehaviour
         }
         if (!gas) {
             body.drag = friction * 2;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.CompareTag("Enemy")) {
+            hitPoints--;
+            Debug.Log(hitPoints);
+            if (hitPoints == 0) {
+                playerObject.SetActive(false);
+            }
         }
     }
 }
