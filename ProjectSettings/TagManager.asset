@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bullet
   - Enemy
   layers:
   - Default
@@ -15,14 +14,9 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-<<<<<<< HEAD:ProjectSettings/TagManager.asset
-  - Background Image
   - 
-=======
-  - Background
-  - Character
->>>>>>> 491a4c71a39b024354102fff0a6302631c9b39c8:ProjectSettings/TagManager.asset
+  - 
+  - 
   - 
   - 
   - 
@@ -47,7 +41,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background Image
-    uniqueID: 3017808783
     locked: 0
