@@ -142,17 +142,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afc8cf8f4652f74085aee3e7ab23091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 20
   tilt: 0
   boundary:
     xMin: 0
     xMax: 0
     yMin: 0
     yMax: 0
-  shot: {fileID: 0}
-  shotSpawn: {fileID: 0}
-  fireRate: 0
-  rb: {fileID: 0}
+  bullet: {fileID: 7308710970164801081, guid: 59fb2a64795dcd44b805d36b7dda20f1, type: 3}
+  shotSpawn: {fileID: 1046633470}
+  fireRate: 0.25
 --- !u!212 &26895843
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -391,7 +390,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046633469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.01, y: 0.134, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0}
   m_Children: []
   m_Father: {fileID: 26895844}

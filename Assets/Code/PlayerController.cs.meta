@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Scenes/Schussfaehigkeit.cs.meta
-guid: 7afc8cf8f4652f74085aee3e7ab23091
-=======
-guid: 60e3a533fecf19f48b11be99c494cbe3
->>>>>>> origin/master:Assets/Code/PlayerController.cs.meta
+guid: d99fccdc5fa457c42952f2912ed5bac1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

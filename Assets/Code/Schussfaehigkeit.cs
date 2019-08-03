@@ -14,9 +14,19 @@ public class Schussfaehigkeit : MonoBehaviour
     public float tilt;
     public Boundary boundary;
 
+    public GameObject bullet;
+    public Transform shotSpawn;
+    public float fireRate;
+
+    private float nextFire;
+
     private void Update()
     {
-        Instantiate (object, position, rotation);
+        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(bullet, shotSpawn.position, shotSpawn.rotation);
+        }
     }
 
 
