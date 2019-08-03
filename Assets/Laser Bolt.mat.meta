@@ -1,15 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Laser Bolt.mat.meta
 guid: f44f47cabdb8601418aa41e6f8759295
 NativeFormatImporter:
   externalObjects: {}
-  mainObjectFileID: 2100000
-=======
-guid: 4a688b1a9d7659d46bfcb784978f918c
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 6200000
->>>>>>> origin/master:Assets/Materials/Boss1Material.physicsMaterial2D.meta
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
