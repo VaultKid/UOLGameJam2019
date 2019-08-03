@@ -1,27 +1,46 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Boss3Control : MonoBehaviour
 {
-    public Transform Player;
     public GameObject bossGameObject;
-    Rigidbody2D rbBoss3;
-    public float movementSpeed = 5;
-    public float hitPoints;
-    public float MaxDist = 100000;
-    public float MinDist = 0;
+    Rigidbody2D rbBoss;
+    public float speed;
+    float hitPoints;
+    public Transform target;
+    public float fireRate;
+    public float nextFire;
+    public Transform firePoint;
+    public BulletController bullet;
+    public float bulletSpeed;
 
     void Start()
     {
-        hitPoints = 10;
-        rbBoss3 = GetComponent<Rigidbody2D>();
+        hitPoints = 5;
+        rbBoss = GetComponent<Rigidbody2D>();
+      
     }
 
-     void Update()
+    private void Update()
     {
-        transform.LookAt(Player);
-        transform.position += transform.forward * movementSpeed * Time.deltaTime;
+        Vector2 direction = target.transform.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
+
+        transform.position += transform.right * speed * Time.deltaTime;
+
+
+        if (Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
+            newBullet.speed = bulletSpeed;
+
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -36,5 +55,4 @@ public class Boss3Control : MonoBehaviour
             }
         }
     }
-
 }
