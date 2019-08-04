@@ -31,6 +31,11 @@ public class BossController4 : MonoBehaviour
         rbBoss.transform.position = Vector2.MoveTowards(rbBoss.transform.position, target.transform.position, 0.02f);
         rbBoss.transform.Rotate(0, 0, -3, Space.Self);
         fire();
+
+        if (hitPoints <= 0) {
+            FindObjectOfType<AudioManager>().Play("Explosion1");
+            bossGameObject.SetActive(false);
+        }
     }
 
     void LinearBossMovement()
@@ -77,11 +82,6 @@ public class BossController4 : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet"))
         {
             hitPoints--;
-            Debug.Log(hitPoints);
-            if (hitPoints == 0)
-            {
-                bossGameObject.SetActive(false);
-            }
         }
     }
 }

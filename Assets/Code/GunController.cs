@@ -44,8 +44,5 @@ public class GunController : MonoBehaviour
             fireRate = 1f;
         }
     }
-
-
-
 }
 
