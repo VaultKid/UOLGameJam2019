@@ -273,6 +273,11 @@ PrefabInstance:
       propertyPath: GameOverCanvas
       value: 
       objectReference: {fileID: 1719037674}
+    - target: {fileID: 4760411602572692069, guid: e32189bb21da7fd4bab7ae35fdaeb47d,
+        type: 3}
+      propertyPath: bossObject
+      value: 
+      objectReference: {fileID: 1329388197}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e32189bb21da7fd4bab7ae35fdaeb47d, type: 3}
 --- !u!1001 &985429733
@@ -290,12 +295,12 @@ PrefabInstance:
     - target: {fileID: 7917441058664897957, guid: 916909bb54a57794fa56caf15ce5517a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7917441058664897957, guid: 916909bb54a57794fa56caf15ce5517a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.15
       objectReference: {fileID: 0}
     - target: {fileID: 7917441058664897957, guid: 916909bb54a57794fa56caf15ce5517a,
         type: 3}
@@ -706,6 +711,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 985429734}
+    - target: {fileID: 1176512960, guid: 32b1fcf5a87b080449a2820239a2026c, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1176512960}
+    - target: {fileID: 1176512960, guid: 32b1fcf5a87b080449a2820239a2026c, type: 3}
+      propertyPath: bossObject
+      value: 
+      objectReference: {fileID: 1329388197}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32b1fcf5a87b080449a2820239a2026c, type: 3}
 --- !u!1 &1176512959 stripped
@@ -714,6 +727,42 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1176512958}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1176512960 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1176512963, guid: 32b1fcf5a87b080449a2820239a2026c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1176512958}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1329388197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1329388198}
+  m_Layer: 0
+  m_Name: BossObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1329388198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329388197}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.169068, y: 2.6414733, z: -1.1330874}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1395822299
 PrefabInstance:
   m_ObjectHideFlags: 0

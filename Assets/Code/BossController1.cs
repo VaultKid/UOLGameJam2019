@@ -8,19 +8,22 @@ public class BossController1 : MonoBehaviour
     public GameObject bossGameObject;
     Rigidbody2D rbBoss;
     public float speed;
-    float hitPoints;
+    public float hitPoints;
+    public Animator animator;
+    public GameObject bossObject;
 
     void Start()
     {
-        hitPoints = 5;
+        hitPoints = 20;
         rbBoss = GetComponent<Rigidbody2D>();
         InvokeRepeating("randomBossMovement", 1f, 1.0f);
     }
 
     void Update() {
         if (hitPoints <= 0) {
-            FindObjectOfType<AudioManager>().Play("Explosion1");
-            bossGameObject.SetActive(false);
+            //FindObjectOfType<AudioManager>().Play("Explosion1");
+            bossObject.SetActive(false);
+            animator.SetBool("isAlive", false);
         }
     }
 

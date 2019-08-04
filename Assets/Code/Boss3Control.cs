@@ -10,23 +10,28 @@ public class Boss3Control : MonoBehaviour
     public float speed;
     float hitPoints;
     public GameObject target;
-    public float fireRate;
+     float fireRate;
     public float nextFire;
     public Transform firePoint;
     public BulletControllerEnemy bullet;
     public float bulletSpeed;
+    public Animator animator;
+    public GameObject bossObject;
 
     void Start()
     {
-        hitPoints = 5;
+        hitPoints = 20;
         rbBoss = GetComponent<Rigidbody2D>();
+        fireRate = 1;
     }
 
     private void Update()
     {
         if (hitPoints <= 0) {
-            FindObjectOfType<AudioManager>().Play("Explosion1");
-            bossGameObject.SetActive(false);
+            //FindObjectOfType<AudioManager>().Play("Explosion3");
+            //bossGameObject.SetActive(false);
+            bossObject.SetActive(false);
+            animator.SetBool("isAlive", false);
         }
 
         Vector2 direction = target.transform.position - transform.position;
