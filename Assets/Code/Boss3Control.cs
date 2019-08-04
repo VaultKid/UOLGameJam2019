@@ -9,7 +9,7 @@ public class Boss3Control : MonoBehaviour
     Rigidbody2D rbBoss;
     public float speed;
     float hitPoints;
-    public Transform target;
+    public GameObject target;
     public float fireRate;
     public float nextFire;
     public Transform firePoint;
@@ -29,19 +29,18 @@ public class Boss3Control : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
-
         transform.position += transform.right * speed * Time.deltaTime;
-
 
         if (Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
-            BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
+            Quaternion temp = firePoint.rotation;
+            temp *= Quaternion.Euler(0, 0, -90f);
+            BulletController newBullet = Instantiate(bullet, firePoint.position, temp) as BulletController;
             newBullet.speed = bulletSpeed;
-
         }
-
     }
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
