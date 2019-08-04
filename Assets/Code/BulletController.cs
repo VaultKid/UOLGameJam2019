@@ -26,7 +26,11 @@ public class BulletController : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("collision happened");
+<<<<<<< HEAD
             Destroy(this.gameObject);
+=======
+            Destroy(this);
+>>>>>>> cc8a3ab9fcd83fb50e8677877928e9311e881a54
         }
     }
 }
