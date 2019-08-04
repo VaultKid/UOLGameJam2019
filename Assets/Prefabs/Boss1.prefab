@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossGameObject: {fileID: 5748917485013325053}
-  speed: 50
+  speed: 100
 --- !u!95 &973841049
 Animator:
   serializedVersion: 3

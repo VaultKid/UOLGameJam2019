@@ -22,6 +22,7 @@ public class GunController : MonoBehaviour
             nextFire = Time.time + fireRate;
             BulletController newBullet = Instantiate(bullet, firePoint.position, firePoint.rotation) as BulletController;
             newBullet.speed = bulletSpeed;
+            FindObjectOfType<AudioManager>().Play("Laser1");
             //Instantiate(bullet, shotSpawn.position, shotSpawn.rotation);
             //Rigidbody2D bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 1))) as Rigidbody2D;
         }
