@@ -9,7 +9,7 @@ public class BossController4 : MonoBehaviour
     private float speed = 50;
     float hitPoints;
     public GameObject target;
-    public BulletController bullet;
+    public BulletControllerEnemy bullet;
     private float bulletSpeed = 0.2f;
     private float fireRate = 1;
     private float nextFire = 1;
@@ -60,19 +60,19 @@ public class BossController4 : MonoBehaviour
             nextFire = Time.time + fireRate;
             Quaternion temp = firePoint.rotation;
 
-            BulletController newBullet = Instantiate(bullet, firePoint.position, temp) as BulletController;
+            BulletControllerEnemy newBullet = Instantiate(bullet, firePoint.position, temp) as BulletControllerEnemy;
             newBullet.speed = bulletSpeed;
 
             temp *= Quaternion.Euler(0, 0, 90f);
-            BulletController newBullet2 = Instantiate(bullet, firePoint.position, temp) as BulletController;
+            BulletControllerEnemy newBullet2 = Instantiate(bullet, firePoint.position, temp) as BulletControllerEnemy;
             newBullet2.speed = bulletSpeed;
 
             temp *= Quaternion.Euler(0, 0, 90f);
-            BulletController newBullet3 = Instantiate(bullet, firePoint.position, temp) as BulletController;
+            BulletControllerEnemy newBullet3 = Instantiate(bullet, firePoint.position, temp) as BulletControllerEnemy;
             newBullet3.speed = bulletSpeed;
 
             temp *= Quaternion.Euler(0, 0, 90f);
-            BulletController newBullet4 = Instantiate(bullet, firePoint.position, temp) as BulletController;
+            BulletControllerEnemy newBullet4 = Instantiate(bullet, firePoint.position, temp) as BulletControllerEnemy;
             newBullet4.speed = bulletSpeed;
         }
     }
