@@ -38,10 +38,10 @@ public class GunController : MonoBehaviour
 
     private void handlePowerUps() {
         if (progress.slowBullets) {
-            bulletSpeed = 0.125f;
+            bulletSpeed = 0.05f;
         }
         if (progress.slowBullets) {
-            fireRate = 0.125f;
+            fireRate = 1f;
         }
     }
 
