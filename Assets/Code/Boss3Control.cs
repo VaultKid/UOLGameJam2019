@@ -13,7 +13,7 @@ public class Boss3Control : MonoBehaviour
     public float fireRate;
     public float nextFire;
     public Transform firePoint;
-    public BulletController bullet;
+    public BulletControllerEnemy bullet;
     public float bulletSpeed;
 
     void Start()
@@ -37,7 +37,7 @@ public class Boss3Control : MonoBehaviour
             nextFire = Time.time + fireRate;
             Quaternion temp = firePoint.rotation;
             temp *= Quaternion.Euler(0, 0, -90f);
-            BulletController newBullet = Instantiate(bullet, firePoint.position, temp) as BulletController;
+            BulletControllerEnemy newBullet = Instantiate(bullet, firePoint.position, temp) as BulletControllerEnemy;
             newBullet.speed = bulletSpeed;
         }
     }
