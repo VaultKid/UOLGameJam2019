@@ -15,7 +15,13 @@ public class BossController1 : MonoBehaviour
         hitPoints = 5;
         rbBoss = GetComponent<Rigidbody2D>();
         InvokeRepeating("randomBossMovement", 1f, 1.0f);
+    }
 
+    void Update() {
+        if (hitPoints <= 0) {
+            FindObjectOfType<AudioManager>().Play("Explosion1");
+            bossGameObject.SetActive(false);
+        }
     }
 
     public void randomBossMovement() {
@@ -26,11 +32,6 @@ public class BossController1 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Bullet")) {
             hitPoints--;
-            Debug.Log(hitPoints);
-            if(hitPoints == 0) {
-                FindObjectOfType<AudioManager>().Play("Explosion1");
-                bossGameObject.SetActive(false);
-            }
         }
     }
 }

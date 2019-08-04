@@ -9,7 +9,7 @@ public class BossController4 : MonoBehaviour
     private float speed = 50;
     float hitPoints;
     public GameObject target;
-    public BulletController bullet;
+    public BulletControllerEnemy bullet;
     private float bulletSpeed = 0.2f;
     private float fireRate = 1;
     private float nextFire = 1;
@@ -31,6 +31,11 @@ public class BossController4 : MonoBehaviour
         rbBoss.transform.position = Vector2.MoveTowards(rbBoss.transform.position, target.transform.position, 0.02f);
         rbBoss.transform.Rotate(0, 0, -3, Space.Self);
         fire();
+
+        if (hitPoints <= 0) {
+            FindObjectOfType<AudioManager>().Play("Explosion1");
+            bossGameObject.SetActive(false);
+        }
     }
 
     void LinearBossMovement()
@@ -55,19 +60,19 @@ public class BossController4 : MonoBehaviour
             nextFire = Time.time + fireRate;
             Quaternion temp = firePoint.rotation;
 
-            BulletController newBullet = Instantiate(bullet, firePoint.position, temp) as BulletController;
+            BulletControllerEnemy newBullet = Instantiate(bullet, firePoint.position, temp) as BulletControllerEnemy;
             newBullet.speed = bulletSpeed;
 
             temp *= Quaternion.Euler(0, 0, 90f);
-            BulletController newBullet2 = Instantiate(bullet, firePoint.position, temp) as BulletController;
+            BulletControllerEnemy newBullet2 = Instantiate(bullet, firePoint.position, temp) as BulletControllerEnemy;
             newBullet2.speed = bulletSpeed;
 
             temp *= Quaternion.Euler(0, 0, 90f);
-            BulletController newBullet3 = Instantiate(bullet, firePoint.position, temp) as BulletController;
+            BulletControllerEnemy newBullet3 = Instantiate(bullet, firePoint.position, temp) as BulletControllerEnemy;
             newBullet3.speed = bulletSpeed;
 
             temp *= Quaternion.Euler(0, 0, 90f);
-            BulletController newBullet4 = Instantiate(bullet, firePoint.position, temp) as BulletController;
+            BulletControllerEnemy newBullet4 = Instantiate(bullet, firePoint.position, temp) as BulletControllerEnemy;
             newBullet4.speed = bulletSpeed;
         }
     }
@@ -77,11 +82,6 @@ public class BossController4 : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet"))
         {
             hitPoints--;
-            Debug.Log(hitPoints);
-            if (hitPoints == 0)
-            {
-                bossGameObject.SetActive(false);
-            }
         }
     }
 }
