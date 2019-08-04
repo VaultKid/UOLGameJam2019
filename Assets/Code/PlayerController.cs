@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -54,11 +55,13 @@ public class PlayerController : MonoBehaviour
     public int hitPoints;
     private Progress progress;
     private SpriteRenderer spriteRenderer;
+    public bool gameOver;
 
     void Start() {
         body = GetComponent<Rigidbody2D>();
         progress = FindObjectOfType<Progress>();
-        handlePowerUps();
+        HandlePowerUps();
+        gameOver = false;
     }
 
     void FixedUpdate() {
@@ -85,6 +88,12 @@ public class PlayerController : MonoBehaviour
         }
 
         noGas();
+
+        if (hitPoints <= 0) {
+            FindObjectOfType<AudioManager>().Play("Explosion2");
+            gameOver = true;
+            playerObject.SetActive(false);
+        }
     }
 
     void noGas() {
@@ -103,17 +112,16 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
             hitPoints--;
-            Debug.Log(hitPoints);
-            if (hitPoints <= 0) {
-                FindObjectOfType<AudioManager>().Play("Explosion2");
-                playerObject.SetActive(false);
-            }
         }
     }
 
-    private void handlePowerUps() {
+    private void HandlePowerUps() {
         if (progress.invisibility) {
             GetComponent<SpriteRenderer>().enabled = false;
+        }
+        if (progress.superSpeed) {
+            power *= 3;
+            maxspeed *= 3;
         }
     }
 }
