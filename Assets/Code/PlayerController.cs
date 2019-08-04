@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy")) {
             hitPoints--;
             Debug.Log(hitPoints);
-            if (hitPoints == 0) {
+            if (hitPoints <= 0) {
                 FindObjectOfType<AudioManager>().Play("Explosion2");
                 playerObject.SetActive(false);
             }
