@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
             hitPoints--;
             Debug.Log(hitPoints);
             if (hitPoints == 0) {
+                FindObjectOfType<AudioManager>().Play("Explosion2");
                 playerObject.SetActive(false);
             }
         }
