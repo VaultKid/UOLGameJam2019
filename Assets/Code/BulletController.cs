@@ -27,7 +27,6 @@ public class BulletController : MonoBehaviour
         {
             Debug.Log("collision happened");
             Destroy(this);
-
         }
     }
 }
