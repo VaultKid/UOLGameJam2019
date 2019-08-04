@@ -341,6 +341,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background Layer
       objectReference: {fileID: 0}
+    - target: {fileID: 5098344201827748667, guid: 57fa47ce7f204dd4bbd36a83791a49b9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5098344201827748667, guid: 57fa47ce7f204dd4bbd36a83791a49b9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5269604591893637170, guid: 57fa47ce7f204dd4bbd36a83791a49b9,
         type: 3}
       propertyPath: m_LocalPosition.x
