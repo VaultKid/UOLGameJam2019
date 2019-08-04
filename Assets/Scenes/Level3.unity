@@ -385,6 +385,75 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57fa47ce7f204dd4bbd36a83791a49b9, type: 3}
+--- !u!1001 &1223935682
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1067738152699015122, guid: 4ae5eadc3eb040c46aec889716353eb0,
+        type: 3}
+      propertyPath: m_Name
+      value: BulletStop Map Boarder
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067738152699015121, guid: 4ae5eadc3eb040c46aec889716353eb0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.2825112
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067738152699015121, guid: 4ae5eadc3eb040c46aec889716353eb0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3388671
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067738152699015121, guid: 4ae5eadc3eb040c46aec889716353eb0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 32.669888
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067738152699015121, guid: 4ae5eadc3eb040c46aec889716353eb0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067738152699015121, guid: 4ae5eadc3eb040c46aec889716353eb0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067738152699015121, guid: 4ae5eadc3eb040c46aec889716353eb0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067738152699015121, guid: 4ae5eadc3eb040c46aec889716353eb0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067738152699015121, guid: 4ae5eadc3eb040c46aec889716353eb0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067738152699015121, guid: 4ae5eadc3eb040c46aec889716353eb0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067738152699015121, guid: 4ae5eadc3eb040c46aec889716353eb0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1067738152699015121, guid: 4ae5eadc3eb040c46aec889716353eb0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ae5eadc3eb040c46aec889716353eb0, type: 3}
 --- !u!1001 &1336198154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -767,6 +836,12 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1988828419}
+    - target: {fileID: 3299410693134084256, guid: ecfab19213d5aef4188df2896ca92613,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 4337126847115473733, guid: 5792706451fe86b4194d98d6389940b7,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecfab19213d5aef4188df2896ca92613, type: 3}
 --- !u!1 &4656905494870916533 stripped

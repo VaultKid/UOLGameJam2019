@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3299410693134084259}
   - component: {fileID: 3299410693134084263}
   - component: {fileID: 3299410693134084256}
+  - component: {fileID: 8937507975471846905}
   m_Layer: 0
   m_Name: Boss3
   m_TagString: Untagged
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 810883145
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c0d5da4aed8937e4192d3636c3738715, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 19bf38e257d00284b8366e7032e7d73f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,18 +117,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.006515622, y: 0.03925748}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.04, y: 0.84}
+    oldSize: {x: 0.825, y: 1.225}
     newSize: {x: 1.04, y: 0.84}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.05, y: 0.84}
+  m_Size: {x: 0.65394783, y: 0.8070525}
   m_EdgeRadius: 0
 --- !u!114 &3299410693134084256
 MonoBehaviour:
@@ -149,3 +150,22 @@ MonoBehaviour:
   firePoint: {fileID: 3299410693134084257}
   bullet: {fileID: 3398080848966369083, guid: 5792706451fe86b4194d98d6389940b7, type: 3}
   bulletSpeed: 0.25
+--- !u!95 &8937507975471846905
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3299410693134084284}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a7655c2e32341d3408cc1549817675f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
