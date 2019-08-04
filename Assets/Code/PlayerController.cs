@@ -56,6 +56,10 @@ public class PlayerController : MonoBehaviour
     private Progress progress;
     private SpriteRenderer spriteRenderer;
     public bool gameOver;
+    public bool alive;
+
+    public CharacterController controller;
+    public Animator animator;
 
     void Start() {
         body = GetComponent<Rigidbody2D>();
@@ -90,9 +94,11 @@ public class PlayerController : MonoBehaviour
         noGas();
 
         if (hitPoints <= 0) {
-            FindObjectOfType<AudioManager>().Play("Explosion2");
+            //FindObjectOfType<AudioManager>().Play("Explosion2");
             gameOver = true;
-            playerObject.SetActive(false);
+            animator.SetBool("PlayerAlive", false);
+            //playerObject.SetActive(false);
+            //playerObject.GetComponent <Animator>().runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Animation/Explosion.controller");
         }
     }
 

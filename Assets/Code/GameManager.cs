@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject boss;
+    public GameObject bossObject;
     public GameObject overlay;
     public GameObject GameOverCanvas;
     private bool won;
@@ -26,12 +26,12 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (boss.activeInHierarchy == false && !won) {
+        if (bossObject.activeInHierarchy == false && !won && !lose) {
             won = true;
             Victory();
         }
 
-        if (playerController.gameOver && !lose) {
+        if (playerController.gameOver && !lose && !won) {
             lose = true;
             GameOver();
         }
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator WaitForVictory() {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
         overlay.SetActive(true);
         if (bossNumber == 1) {
             powerUpText.text = "Invisibility gained!";
