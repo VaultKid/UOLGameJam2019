@@ -14,11 +14,13 @@ public class BossController4 : MonoBehaviour
     private float fireRate = 1;
     private float nextFire = 1;
     public Transform firePoint;
+    public Animator animator;
+    public GameObject bossObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        hitPoints = 5;
+        hitPoints = 15;
         rbBoss = GetComponent<Rigidbody2D>();
         //InvokeRepeating("JumpBossMovement", time: 1f, 10f);
         //LinearBossMovement();
@@ -33,8 +35,10 @@ public class BossController4 : MonoBehaviour
         fire();
 
         if (hitPoints <= 0) {
-            FindObjectOfType<AudioManager>().Play("Explosion1");
-            bossGameObject.SetActive(false);
+            //FindObjectOfType<AudioManager>().Play("Explosion");
+            bossObject.SetActive(false);
+            animator.SetBool("isAlive", false);
+            //bossGameObject.SetActive(false);
         }
     }
 

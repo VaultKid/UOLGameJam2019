@@ -112,6 +112,42 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!95 &154483617 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1429978751, guid: 916909bb54a57794fa56caf15ce5517a,
+    type: 3}
+  m_PrefabInstance: {fileID: 985429733}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &502673580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 502673581}
+  m_Layer: 0
+  m_Name: BossObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &502673581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502673580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.169068, y: 2.6414733, z: -1.1330874}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &567489062
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +223,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3979624238737155836}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &753419435 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3979624239477957207, guid: e9bac556b452a6646b45e3925c520397,
+    type: 3}
+  m_PrefabInstance: {fileID: 3979624238737155836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &985429733
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -259,6 +301,15 @@ PrefabInstance:
       propertyPath: GameOverCanvas
       value: 
       objectReference: {fileID: 1151590444}
+    - target: {fileID: 7917441058664897956, guid: 916909bb54a57794fa56caf15ce5517a,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 154483617}
+    - target: {fileID: 1429978751, guid: 916909bb54a57794fa56caf15ce5517a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 008e89cc00266ee4a9df17cae71c62d7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 916909bb54a57794fa56caf15ce5517a, type: 3}
 --- !u!1001 &995216695
@@ -781,6 +832,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3979624239477957206, guid: e9bac556b452a6646b45e3925c520397,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 753419435}
+    - target: {fileID: 3979624239477957206, guid: e9bac556b452a6646b45e3925c520397,
+        type: 3}
+      propertyPath: bossObject
+      value: 
+      objectReference: {fileID: 502673580}
+    - target: {fileID: 3979624239477957206, guid: e9bac556b452a6646b45e3925c520397,
+        type: 3}
+      propertyPath: bossGameObject
+      value: 
+      objectReference: {fileID: 502673580}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9bac556b452a6646b45e3925c520397, type: 3}
 --- !u!1001 &4267807325092277748
@@ -989,5 +1055,10 @@ PrefabInstance:
       propertyPath: GameOverCanvas
       value: 
       objectReference: {fileID: 1151590444}
+    - target: {fileID: 4760411602572692069, guid: e32189bb21da7fd4bab7ae35fdaeb47d,
+        type: 3}
+      propertyPath: bossObject
+      value: 
+      objectReference: {fileID: 502673580}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e32189bb21da7fd4bab7ae35fdaeb47d, type: 3}
