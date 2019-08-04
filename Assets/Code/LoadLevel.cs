@@ -8,6 +8,7 @@ public class LoadLevel : MonoBehaviour
     public string scene;
     public void NextScene()
     {
+        FindObjectOfType<AudioManager>().Play("Ui");
         SceneManager.LoadScene(scene);
     }
 }
