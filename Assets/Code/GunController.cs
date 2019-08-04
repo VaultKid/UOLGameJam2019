@@ -10,10 +10,18 @@ public class GunController : MonoBehaviour
 
     //public Transform shotSpawn;
     public BulletController bullet;
-    public float bulletSpeed;
-    public float fireRate;
+    private float bulletSpeed;
+    private float fireRate;
     private float nextFire;
     public Transform firePoint;
+    private Progress progress;
+
+    void Start() {
+        fireRate = 0.25f;
+        bulletSpeed = 0.25f;
+        progress = FindObjectOfType<Progress>();
+        handlePowerUps();
+    }
 
     private void Update()
     {
@@ -25,6 +33,15 @@ public class GunController : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Laser1");
             //Instantiate(bullet, shotSpawn.position, shotSpawn.rotation);
             //Rigidbody2D bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 1))) as Rigidbody2D;
+        }
+    }
+
+    private void handlePowerUps() {
+        if (progress.slowBullets) {
+            bulletSpeed = 0.125f;
+        }
+        if (progress.slowBullets) {
+            fireRate = 0.125f;
         }
     }
 

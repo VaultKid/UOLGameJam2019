@@ -52,9 +52,13 @@ public class PlayerController : MonoBehaviour
     public float friction = 100;
     public Vector2 curspeed;
     public int hitPoints;
+    private Progress progress;
+    private SpriteRenderer spriteRenderer;
 
     void Start() {
         body = GetComponent<Rigidbody2D>();
+        progress = FindObjectOfType<Progress>();
+        handlePowerUps();
     }
 
     void FixedUpdate() {
@@ -100,10 +104,16 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy")) {
             hitPoints--;
             Debug.Log(hitPoints);
-            if (hitPoints == 0) {
+            if (hitPoints <= 0) {
                 FindObjectOfType<AudioManager>().Play("Explosion2");
                 playerObject.SetActive(false);
             }
+        }
+    }
+
+    private void handlePowerUps() {
+        if (progress.invisibility) {
+            GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 }
