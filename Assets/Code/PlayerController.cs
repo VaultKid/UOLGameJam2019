@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
     public float power = 5;
     public float maxspeed = 20;
     public float turnpower = 3;
-    public float friction = 1;
+    public float friction = 100;
     public Vector2 curspeed;
     public int hitPoints;
 
