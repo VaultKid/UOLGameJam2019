@@ -31,6 +31,7 @@ public class Boss3Control : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
         transform.position += transform.right * speed * Time.deltaTime;
 
+
         if (Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;

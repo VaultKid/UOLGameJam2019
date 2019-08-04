@@ -28,6 +28,7 @@ public class BossController1 : MonoBehaviour
             hitPoints--;
             Debug.Log(hitPoints);
             if(hitPoints == 0) {
+                FindObjectOfType<AudioManager>().Play("Explosion1");
                 bossGameObject.SetActive(false);
             }
         }

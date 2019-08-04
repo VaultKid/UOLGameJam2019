@@ -46,10 +46,10 @@ public class PlayerController : MonoBehaviour
 
     public GameObject playerObject;
     Rigidbody2D body;
-    public float power = 30;
-    public float maxspeed = 50;
+    public float power = 5;
+    public float maxspeed = 20;
     public float turnpower = 3;
-    public float friction = 1;
+    public float friction = 100;
     public Vector2 curspeed;
     public int hitPoints;
 
@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
             hitPoints--;
             Debug.Log(hitPoints);
             if (hitPoints == 0) {
+                FindObjectOfType<AudioManager>().Play("Explosion2");
                 playerObject.SetActive(false);
             }
         }
