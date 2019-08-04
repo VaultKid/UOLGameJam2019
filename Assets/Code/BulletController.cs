@@ -20,4 +20,14 @@ public class BulletController : MonoBehaviour
     private void FixedUpdate() {
         transform.Translate(Vector3.up* speed);
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Debug.Log("collision happened");
+            Destroy(this);
+
+        }
+    }
 }

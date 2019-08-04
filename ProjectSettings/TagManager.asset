@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Bullet
-  - EnemyBullet
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -52,7 +52,4 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 810883145
-    locked: 0
-  - name: Overlay
-    uniqueID: 100325203
     locked: 0
